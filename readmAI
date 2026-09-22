@@ -1,0 +1,38 @@
+# Laboratório de IA do Azure: Anotações e Prática (Speech Studio e Language Studio)
+
+## 📌 Descrição do Desafio
+Este repositório documenta a minha jornada prática e o aprofundamento no uso das ferramentas **Azure Speech Studio** e **Language Studio**, focando na análise de fala e de linguagem natural (NLP). O objetivo foi aplicar conceitos teóricos num ambiente prático, explorando serviços cognitivos de IA na nuvem da Microsoft.
+
+---
+
+## 🚀 Conceitos Fundamentais de IA e Azure
+* **Machine Learning:** Modelos preditivos baseados em dados e estatísticas que permitem aos sistemas aprender e prever resultados.
+* **Aprendizado Profundo (Deep Learning):** Forma avançada de aprendizado de máquina que tenta emular a maneira como o cérebro humano aprende.
+* **Tipos de Regressão e Classificação:** 
+  * *Regressão:* Prevê um valor numérico.
+  * *Classificação Binária:* O rótulo determina se o item observado é ou não uma instância de uma classe específica.
+* **IA Responsável:** Segue princípios fundamentais como a **Transparência**, equidade, fiabilidade e privacidade.
+* **Consumo dos Serviços de IA do Azure:** Os serviços podem ser consumidos por aplicações através de um ponto de extremidade REST (`https://endereço`), chaves de autenticação e tokens de autorização.
+
+---
+
+## 🎙️ Anotações Práticas: Azure Speech Studio e Linguagem
+* **Azure Speech Studio:** 
+  * Fornece capacidades robustas de reconhecimento de fala (Speech-to-Text) e conversão de texto em fala (Text-to-Speech).
+* **Azure Language Studio (`https://language.cognitive.azure.com`):** 
+  * Plataforma centralizada para testar e criar soluções de Processamento de Linguagem Natural (NLP).
+  * **Análise de Texto e Extração:** Inclui a identificação do idioma predominante, análise de sentimentos, mineração de opiniões e **Extração de frases-chave** (responsável por avaliar e retornar os principais conceitos em texto não estruturado como uma lista).
+* **Serviço de Tradutor (Translator):** Serviço de tradução automática neural baseado em nuvem, independente de sistema operativo.
+* **Respostas às Perguntas (QnA):** Utilizado para criar bases de conhecimento para bots inteligentes com base em FAQs ou documentos.
+
+---
+
+## 👁️ Outros Serviços de IA do Azure Explorados
+* **Visão de IA do Azure:** Inclui recursos de Análise de Imagem, Detecção Facial e Reconhecimento Óptico de Caracteres (OCR).
+* **Azure Machine Learning:** Serviço de nuvem dedicado ao treinamento, implantação e gerenciamento de modelos de *machine learning*.
+
+---
+
+## 🛠️ Estrutura do Repositório
+* `README.md`: Documentação detalhada com anotações e insights adquiridos durante o laboratório.
+* `/images`: Pasta opcional reservada para capturas de tela das ferramentas em funcionamento no portal do Azure, Speech Studio e Language Studio.
