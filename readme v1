@@ -1,0 +1,55 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerPhrases:
+      - Chiado ou rangido forte na maquina
+      - Peças com situação anormal
+      - Bobina manchada
+      - Respingo de solda
+      - Falha na maquina
+      - Problema no equipamento
+      - Ocorreu uma falha
+
+  actions:
+    - kind: SendActivity
+      id: alertFalha
+      activity: >-
+        ⚠️ **Atenção:** Uma falha ou anomalia foi detectada no sistema. Vou iniciar o protocolo de suporte técnico para auxiliá-lo.
+
+    - kind: Question
+      id: askSintoma
+      prompt: Entendi. Para que eu possa te indicar a ação ou peça correta, qual é o sintoma ou anomalia exata que você está observando?
+      entity:
+        kind: ListEntity
+        items:
+          - Chiado ou rangido forte na maquina
+          - Peças com situação anormal
+          - Bobina manchada
+          - Respingo de solda 
+          - Programação a ser seguida
+      variable: Topic.SintomaMaquina
+
+    - kind: Question
+      id: askModelo
+      prompt: Qual é o código, modelo ou setor da máquina onde o problema foi identificado?
+      entity:
+        kind: StringPrebuiltEntity
+      variable: Topic.ModeloMaquina
+
+    - kind: SendActivity
+      id: sendResponse
+      activity: >-
+        Com base no problema **{Topic.SintomaMaquina}** na máquina/setor **{Topic.ModeloMaquina}**, analisamos o procedimento padrão e o estoque:
+
+        * **Ação Recomendada:** Verificar os componentes afetados e isolar a linha se necessário.
+
+        * **Peça de Reposição / Insumo:** Kit de Substituição e Limpeza Industrial
+
+        * **Código do Item:** `IND-8842-X`
+
+        * **Disponibilidade:** Em estoque no almoxarifado
+
+
+        Deseja que eu abra um chamado técnico ou registre esse evento no relatório de manutenção?
